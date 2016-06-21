@@ -1,12 +1,18 @@
 
    
 <div>
+   <p>Add a New Product</p>
     <input type="text" ng-model="name" placeholder="Name">
     <input type="text" ng-model="color" placeholder="Color">
-    <button ng-click="add(name, color)">Add</button>
+    <input type="text" ng-model="price" placeholder="Price">
+    <button ng-click="add(name, color, price)">Add</button>
+    <hr>
 </div>
 <div ng-repeat="product in products track by product._id">
-    <p>Name: {{product.title}}</p>
-    <p>Color: {{product.color}}</p>
+   <button class="buy">Buy Now</button>
+    <p>Name: {{product.name}}</p>
+    <p>Description: {{product.description}}</p>
+    <p>Price: {{product.price}}</p>
     <button ng-click="delete(product._id)">Delete</button>
+    <hr>
 </div>

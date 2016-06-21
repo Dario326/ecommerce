@@ -12,8 +12,11 @@ angular.module("MyApp").controller("appCtrl", function($scope, appSrv){
       $scope.delete = appSrv.delete(id);
     }
     
-    $scope.add = function(name, color){
+    $scope.add = function(name, color, price){
         
-        $scope.add = appSrv.newProduct({title: name, color: color})
+        $scope.add = appSrv.newProduct({name: name, description: color, price: price})
+        $scope.name = " ";
+        $scope.color = " ";
+        $scope.price = " ";
     }
 })
