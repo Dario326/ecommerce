@@ -1,0 +1,12 @@
+
+   
+<div>
+    <input type="text" ng-model="name" placeholder="Name">
+    <input type="text" ng-model="color" placeholder="Color">
+    <button ng-click="add(name, color)">Add</button>
+</div>
+<div ng-repeat="product in products track by product._id">
+    <p>Name: {{product.title}}</p>
+    <p>Color: {{product.color}}</p>
+    <button ng-click="delete(product._id)">Delete</button>
+</div>
